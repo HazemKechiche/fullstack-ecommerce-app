@@ -1,0 +1,134 @@
+/* Généralités */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%); /* Dégradé bleu foncé à bleu clair */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Conteneur principal de connexion */
+.login-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+
+/* Wrapper du formulaire */
+.form-wrapper {
+  background-color: rgba(255, 255, 255, 0.95); /* Fond presque blanc */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre plus douce */
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Titre */
+.login-title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #2980b9; /* Bleu vif */
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+/* Formulaire de connexion */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Groupe d'input */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-group input {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #bdc3c7; /* Bordure claire */
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Placeholder text */
+.input-group input::placeholder {
+  color: #95a5a6; /* Gris clair pour le texte des placeholders */
+}
+
+/* Focus sur les champs */
+.input-group input:focus {
+  border-color: #2980b9; /* Bordure bleue lors du focus */
+  box-shadow: 0 0 5px rgba(41, 128, 185, 0.8); /* Lueur bleue autour */
+}
+
+/* Bouton de connexion */
+.submit-container {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-button {
+  padding: 14px 30px;
+  font-size: 18px;
+  background-color: #2980b9; /* Bleu vif */
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect */
+.submit-button:hover {
+  background-color: #3498db; /* Bleu plus clair pour l'effet de survol */
+  transform: scale(1.05);
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+  .login-container {
+      padding: 20px;
+  }
+
+  .form-wrapper {
+      padding: 25px;
+      width: 90%;
+  }
+
+  .login-title {
+      font-size: 24px;
+  }
+
+  .input-group input {
+      font-size: 14px;
+  }
+
+  .submit-button {
+      font-size: 16px;
+  }
+}

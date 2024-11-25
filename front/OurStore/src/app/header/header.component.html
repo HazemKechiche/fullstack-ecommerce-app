@@ -1,0 +1,34 @@
+<nav>
+    <div class="logo">
+        <img class="logo" src="{{imagePath}}logo.png" alt="Logo de votre site">
+    </div>
+
+    <!-- Hamburger Icon for Mobile -->
+    <div class="hamburger" (click)="toggleMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links" [ngClass]="{'active': isMenuOpen}">
+        <a href="#"><i class="fa fa-home"></i> Accueil</a>
+        <a href="#"><i class="fa fa-cogs"></i> Produits</a>
+        <a href="#"><i class="fa fa-shopping-cart"></i> Panier</a>
+    </div>
+
+    <!-- User Section -->
+    <div class="user-section" *ngIf="userIsLoggedIn; else loginSection">
+        <span>Bienvenue, <strong>{{ userName }}</strong></span>
+        <img class="userAvatar" [src]="userAvatarUrl" alt="Avatar de l'utilisateur">
+        <button (click)="logout()">Déconnexion</button>
+    </div>
+
+    <!-- Login/Signup Section -->
+    <ng-template #loginSection>
+        <div class="login-links">
+            <a routerLink="/login"><i class="fa fa-sign-in"></i> Connexion</a>
+            <a routerLink="/register"><i class="fa fa-user-plus"></i> Inscription</a>
+        </div>
+    </ng-template>
+</nav>

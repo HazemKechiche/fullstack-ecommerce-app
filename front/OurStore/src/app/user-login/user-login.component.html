@@ -1,0 +1,18 @@
+<div class="login-container">
+  <div class="form-wrapper">
+      <h2 class="login-title">Se connecter</h2>
+      <form [formGroup]="UserForm" (ngSubmit)="login()" class="login-form">
+          <div class="input-group">
+              <input type="text" id="username" name="username" formControlName="username" placeholder="Nom d'utilisateur" required>
+          </div>
+
+          <div class="input-group">
+              <input type="password" id="password" name="password" formControlName="password" placeholder="Mot de passe" required>
+          </div>
+
+          <div class="submit-container">
+              <button type="submit" class="submit-button">Se connecter</button>
+          </div>
+      </form>
+  </div>
+</div>
